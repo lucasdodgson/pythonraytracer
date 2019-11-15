@@ -1,0 +1,208 @@
+Objects for difference scenes
+
+Scene with 3 triangles 
+a = Vector(0,2000,0)
+center = Vector(0,-2500,0)
+ls1 = Vector(500,200,-500)
+ls2= ls1+ Vector(0,0,1000)
+ls3= ls2+ Vector(-150,550,0)
+ls4 = ls1+Vector(-150,550,0)
+alllights = [ls1,ls2,ls3,ls4]
+
+mats = [0,20,0,"Snow",0.05,False]
+vs1= ls1+ Vector(15.5,0,0)
+vs2= ls2+ Vector(15.5,0,0)
+vs3= ls3+ Vector(15.5,0,0)
+vs4= ls4+ Vector(15.5,0,0)
+s1= Sphere(vs1,15.4,mats)
+s2= Sphere(vs2,15.4,mats)
+s3= Sphere(vs3,15.4,mats)
+s4= Sphere(vs4,15.4,mats)
+
+p1=Plane(Vector(-750,0,800),Vector(10,20,800),Vector(30,10,800),[0.25,1,0.25,"grey",0.1,False])
+p2 = p1.copy(Vector(0,0,-1600))
+p3=Plane(Vector(-4,-1000,10),Vector(10,-1000,4),Vector(6,-1000,0),[0.25,1,0.25,"grey",0.1,True])
+p4=Plane(vs1,vs2,vs3,[0.25,1,0.25,"grey",0.1,False])
+p5= p4.copy(Vector(1300,0,0))
+
+tp1= Vector(-600,100,-400)
+tp2 = tp1+ Vector(0,0,400)
+tp3 = tp2+ Vector(0,0,400)
+tp4 = tp2+ Vector(450,25,200)
+tp5 = tp4-(Vector(0,0,400))
+tp6 = tp5 + (Vector(450,25,200))
+spheremat = [0.4,0.4,0.4,"aquamarine",0.5,True]
+s5 = Sphere(tp1,15,spheremat)
+s6 = Sphere(tp2,15,spheremat)
+s7 = Sphere(tp3,15,spheremat)
+s8 = Sphere(tp4,15,spheremat)
+s9 = Sphere(tp5,15,spheremat)
+s10 = Sphere(tp6,15,spheremat)
+t1= Triangle(tp1,tp2,tp5,[0.25,1,0.25,"silver",0.1,False])
+t2= Triangle(tp2,tp3,tp4,[0.25,1,0.25,"silver",0.1,False])
+t3= Triangle(tp4,tp5,tp6,[0.25,1,0.25,"gold",0.1,False])
+t4= Triangle(tp5,tp4,tp2,[1,1,1,"pink",0,True])
+Objects=[s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,t1,t2,t3,p1,p2,p3,p4,p5]
+
+Other scene, unsure about where a, c and light should be placed: 
+
+#mat1= [0.3,0.3,0.3,"Red",0.1,True]
+#mat2= [0.5,0.5,0.5,"VioletRed",0.15,False]
+#mat3= [0.2,0.2,0.2,"GreenYellow",0.15,False] 
+#mat4= [1,1,1,"Snow",0,False]
+#mat5= [1,1,1,"Gold",0.3,False]
+#mat6= [1,0,1,"RoyalBlue",0,False]
+#mat7= [1,0,1,"green",0.4,False]
+#mat8= [0.4,0.4,2,"Ivory",0.05,False]
+#wood= [1,1,0,"brown",0.5,False]
+#matb = [0.2,0.2,0.2,"hotpink",0.55,False]
+
+#s = Sphere(Vector(0,30,10),130,mat1)
+#s2 = Sphere(Vector(-400,30,-450),100,mat2)
+#s3= Sphere(Vector(400,30,-450),100,mat3)
+#s4 = Sphere(Vector(0,-60,500),30, [0.6,0.6,0.6,"Gold",0.1,False])
+#s5 = Sphere(Vector(500,20,200),60,[0.4,0.4,0.6,"LightSalmon",0.15,False])
+#s6 = Sphere(Vector(-200,20,200),75,[0.2,0.2,0.2,"MintCream",0.15,False])
+#s7 = Sphere(Vector(-375,20,375),130,[0.7,0.7,0.7,"Purple",0.1,False])
+#t1= Triangle(Vector(0,30,10),Vector(-400,30,-450),Vector(400,30,-450),[0.7,0.7,0.7,"yellow",0.1,False])
+#t2 = Triangle(Vector(150,150,110),Vector(100,160,170),Vector(80,140,80),[0.7,0.7,0.7,"green",0.1,False])
+#sb = Sphere(a,3500,matb)
+#
+#s8 = Sphere(Vector(0,30,10),130,mat1)
+#s8.reflect(Vector(-375,20,375))
+#t3= Triangle(Vector(150,150,110),Vector(100,160,170),Vector(80,140,80),[0.7,0.7,0.7,"green",0.1,False]) 
+#t3.reflect(Vector(0,30,10))
+#Objects = [t1,s,s2,s3,t2,s4,s5,s6,s7,sb,s8,t3]
+
+
+
+
+
+
+
+
+
+
+
+center = Vector(0,0,0)
+#eyepoint
+a = Vector(300,0,3000)
+alllights = [Vector(1600,1600,1400)]
+tp1=Vector(400,0,-100)
+tp2=Vector(400,0,100)
+tp3=Vector(400,-200,-100)
+tp4=Vector(400,-200,100)
+tpt=Vector(600,-100,0)
+
+topmat = [0.5,0.5,0.5,"yellow",0,False]
+tri1 = Triangle(tp1,tp2,tpt,topmat)
+tri2 = Triangle(tp1,tp3,tpt,topmat)
+tri3 = Triangle(tp3,tp4,tpt,topmat)
+tri4 = Triangle(tp4,tp2,tpt,topmat)
+
+tp1=Vector(-200,200,900)
+tp2=Vector(-200,200,1100)
+tp3=Vector(-200,00,900)
+tp4=Vector(-200,00,1100)
+tpt=Vector(0,100,1000)
+tpb = Vector(-400,100,1000)
+tri11 = Triangle(tp1,tp2,tpt,topmat)
+tri12 = Triangle(tp1,tp3,tpt,topmat)
+tri5 = Triangle(tp3,tp4,tpt,topmat)
+tri6 = Triangle(tp4,tp2,tpt,topmat)
+tri7 = Triangle(tp1,tp2,tpb,topmat)
+tri8 = Triangle(tp1,tp3,tpb,topmat)
+tri9 = Triangle(tp3,tp4,tpb,topmat)
+tri10 = Triangle(tp4,tp2,tpb,topmat)
+tri13 = tri1.copy(Vector(0,600,0))
+tri14 = tri2.copy(Vector(0,600,0))
+tri15 = tri3.copy(Vector(0,600,0))
+tri16 = tri4.copy(Vector(0,600,0))
+sqr1 = Rectangle(Vector(-400,0,100),Vector(400,0,100),Vector(-400,8000,100),Vector(400,8000,100),[0.8,0.8,0.8,"green",0,False])
+s1= Sphere(Vector(-150,-1450,-1150),250,[0.7,0.7,0.7,"black",1,False])
+s2= Sphere(Vector(-300,550,550),100,[0.6,0.6,0.6,"red",0,True])
+#objects
+p2 = Plane(Vector(-2000,-10000,-80000),Vector(-2000,-15000,-1000),Vector(-2000,-1300,-2000),[0.4 ,6,0.4,"blue",0,False])
+p1 = Plane(Vector(-400,0,-400),Vector(-400,0,400),Vector(-400,-800,-400),[0.8,0.8,0.8,"white",0.2,False])
+p3 = Plane(Vector(100,200,4000),Vector(200,350,4000),Vector(100,500,4000),[0.4 ,6,0.4,"blue",0,False])
+p4 = p3.copy(Vector(0,0,-8000))
+Objects=[p2,p1,tri1,tri2,tri3,tri4,s1,s2,tri5,tri6,tri7,tri8,tri9,tri10,tri11,tri12,p3,p4,tri13,tri14,tri15,tri16,sqr1]
+sq1=Cube(Vector(400,0,-100),Vector(-400,0,-100),Vector(-400,0,100),Vector(400,0,100),Vector(-400,-200,-100),Vector(400,-200,-100),Vector(400,-200,100),Vector(-400,-200,100),[0.5,0.6,0.5,"red",0,False])
+sq2=Cube(Vector(400,1000,-100),Vector(-400,1000,-100),Vector(-400,1000,100),Vector(400,1000,100),Vector(-400,800,-100),Vector(400,800,-100),Vector(400,800,100),Vector(-400,800,100),[0.5,0.6,0.5,"red",0,False])
+#values:
+
+
+
+
+
+centre = Vector(0,0,00)
+#eyepoint
+a = Vector(0,0,6000)
+tp1=Vector(700,0,-100)
+tp2=Vector(700,0,100)
+tp3=Vector(700,-200,-100)
+tp4=Vector(700,-200,100)
+tpt=Vector(900,-100,0)
+
+topmat = [0.5,0.5,0.5,"yellow",0,False]
+tri1 = Triangle(tp1,tp2,tpt,topmat)
+tri2 = Triangle(tp1,tp3,tpt,topmat)
+tri3 = Triangle(tp3,tp4,tpt,topmat)
+tri4 = Triangle(tp4,tp2,tpt,topmat)
+
+tp1=Vector(-200,200,900)
+tp2=Vector(-200,200,1100)
+tp3=Vector(-200,00,900)
+tp4=Vector(-200,00,1100)
+tpt=Vector(0,100,1000)
+tpb = Vector(-400,100,1000)
+tri11 = Triangle(tp1,tp2,tpt,topmat)
+tri12 = Triangle(tp1,tp3,tpt,topmat)
+tri5 = Triangle(tp3,tp4,tpt,topmat)
+tri6 = Triangle(tp4,tp2,tpt,topmat)
+tri7 = Triangle(tp1,tp2,tpb,topmat)
+tri8 = Triangle(tp1,tp3,tpb,topmat)
+tri9 = Triangle(tp3,tp4,tpb,topmat)
+tri10 = Triangle(tp4,tp2,tpb,topmat)
+tri13 = tri1.copy(Vector(0,1000,0))
+tri14 = tri2.copy(Vector(0,1000,0))
+tri15 = tri3.copy(Vector(0,1000,0))
+tri16 = tri4.copy(Vector(0,1000,0))
+tri17 = tri1.copy(Vector(0,-1000,0))
+tri18 = tri2.copy(Vector(0,-1000,0))
+tri19 = tri3.copy(Vector(0,-1000,0))
+tri20 = tri4.copy(Vector(0,-1000,0))
+s1= Sphere(Vector(-150,-750,800),250,[0.7,0.7,0.7,"black",0.4,False])
+s2= Sphere(Vector(-300,650,650),300,[0.6,0.6,0.6,"red",0,True])
+s3= Sphere(Vector(150,100,1000),150,[0.6,0.6,0.6,"red",0,True])
+tri21= Triangle(Vector(900,-1100,0),Vector(900,900,0),Vector(0,-100,0),[0.7,0.7,0.7,"hotpink",0.3,False])
+#objects
+p2 = Plane(Vector(-2000,-10000,-80000),Vector(-2000,-15000,-1000),Vector(-2000,-1300,-2000),[0.4 ,6,0.4,"blue",0,False])
+p1 = Plane(Vector(-400,0,-400),Vector(-400,0,400),Vector(-400,-800,-400),[0.8,0.8,0.8,"white",0.2,False])
+p3 = Plane(Vector(100,200,4000),Vector(200,350,4000),Vector(100,500,4000),[0.4 ,6,0.4,"blue",0,False])
+p4 = p3.copy(Vector(0,0,-8000))
+Objects=[p2,p1,tri1,tri2,tri3,tri4,s1,s2,tri5,tri6,tri7,tri8,tri9,tri10,tri11,tri12,p3,p4,tri13,tri14,tri15,tri16,tri17,tri18,tri19,tri20,s3,tri21]
+sq1=Cuboid(Vector(700,0,-100),Vector(-400,0,-100),Vector(-400,0,100),Vector(700,0,100),Vector(-400,-200,-100),Vector(700,-200,-100),Vector(700,-200,100),Vector(-400,-200,100),[0.5,0.6,0.5,"red",0,False])
+sq2=Cuboid(Vector(700,1000,-100),Vector(-400,1000,-100),Vector(-400,1000,100),Vector(700,1000,100),Vector(-400,800,-100),Vector(700,800,-100),Vector(700,800,100),Vector(-400,800,100),[0.5,0.6,0.5,"red",0,False])
+sq3=Cuboid(Vector(700,-1000,-100),Vector(-400,-1000,-100),Vector(-400,-1000,100),Vector(700,-1000,100),Vector(-400,-1200,-100),Vector(700,-1200,-100),Vector(700,-1200,100),Vector(-400,-1200,100),[0.5,0.6,0.5,"red",0,False])
+sqr1 = Cuboid(Vector(300,0,-100),Vector(-400,0,-100),Vector(-400,0,100),Vector(300,0,100),Vector(-400,800,-100),Vector(300,800,-100),Vector(300,800,100),Vector(-400,800,100),[0.8,0.8,0.8,"green",0,False])
+sqr2 = Cuboid(Vector(-400,-200,-100),Vector(300,-200,-100),Vector(300,-200,100),Vector(-400,-200,100),Vector(300,-1000,-100),Vector(-400,-1000,-100),Vector(-400,-1000,100),Vector(300,-1000,100),[0.8,0.8,0.8,"green",0,False])
+#values:
+s1 = Sphere(Vector(-1000,0,0),700,[0.7,2.5,0.7,"navyblue",0,False])
+s2 = Sphere(Vector(1000,0,0),700,[0.7,2,0.7,"navyblue",0.75,False])
+p1 = Plane(Vector(100,100,-700),Vector(120,80,-700),Vector(120,30,-700),[0.55,0.7,0.55,"green",0,False])
+#Roughness comparrison
+alllights = [Vector(3000,00,350),Vector(-3000,0,350)]
+Objects = [s1,s2,p1]
+#Objects=[s1,s2,p1]
+#
+#s1 = Sphere(Vector(0,0,0),700,[0.6,2,0.6,"Goldenrod",0,False]) 
+#p1 = Plane(Vector(-10,700,20),Vector(10,700,200),Vector(-30,700,400),[0.5,0.5,0.5,"hotpink",0,True])
+#p2 = Plane(Vector(-10,-4101,20),Vector(10,-4101,200),Vector(-30,-4101,400),[0.7,3,0.5,"grey",0,False])
+#s2 = Sphere(Vector(1500,300,0),400,[0.6,2,0.6,"DeepPink",0,False])
+#s3 = Sphere(Vector(-1500,300,0),400,[0.6,2,0.6,"DeepPink",0.5,False])
+#Objects = [s1,p1,s2,s3,p2]
+## Mirror image
+
+
+
